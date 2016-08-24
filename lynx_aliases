@@ -1,0 +1,17 @@
+# None of these are really aliases, since aliases don't play nicely with 
+# long argument lists. This handles reformatting queries to work with lynx.
+
+# Duck Duck Go search engine - quick and dirty, with no cookies by default
+function ddg() {
+	URL=$(echo "http://www.duckduckgo.com/?q=$@" | sed 's/ /%20/g' );
+	lynx "$URL" ;
+}
+
+# YubNub "social command line for the web" search - quick access to almost anything else
+function yn() {
+	URL=$(echo "http://www.yubnub.org/parser/parse?command=$@" | sed 's/ /%20/g' );
+	lynx "$URL" ;
+}
+
+
+
