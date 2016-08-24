@@ -1,5 +1,5 @@
 # alias_lynx
-Quick alias-like tools for searching the web from the command line
+Quick alias-like tools for searching the web from the command line. To start with, I've created shortcuts for myself to use DuckDuckGo and YubNub.
 
 These were developed for my .bashrc file, but get their own repository for the sake of convenience and portability. To use, add the following lines to your .bashrc:
 
