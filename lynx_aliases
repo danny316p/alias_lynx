@@ -3,13 +3,13 @@
 
 # Duck Duck Go search engine - quick and dirty, with no cookies by default
 function ddg() {
-	URL=$(echo "http://www.duckduckgo.com/?q=$@" | sed 's/ /%20/g' );
+	URL=$(echo "https://www.duckduckgo.com/?q=$@" | sed 's/ /%20/g' );
 	lynx "$URL" ;
 }
 
 # Duck Duck Go bang shortcut - similar to the above, but saves you 5 characters (and you don't need to escape the !)
 function b() {
-	URL=$(echo "http://www.duckduckgo.com/?q=!$@" | sed 's/ /%20/g' );
+	URL=$(echo "https://www.duckduckgo.com/?q=!$@" | sed 's/ /%20/g' );
 	lynx "$URL" ;
 }
 
