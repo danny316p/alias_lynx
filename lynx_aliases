@@ -1,4 +1,6 @@
 alias clynx='lynx -cfg=~/github/alias_lynx/my_lynx.cfg'
+WWW_HOME='http://lynx.invisible-island.net'
+export WWW_HOME;
 
 #None of these are really aliases, since aliases don't play nicely with 
 # long argument lists. This handles reformatting queries to work with lynx.
