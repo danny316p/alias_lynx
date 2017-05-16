@@ -1,4 +1,7 @@
-alias clynx='lynx -cfg=~/github/alias_lynx/my_lynx.cfg'
+# This first line may need to be configured as needed
+ALIAS_LYNX_PATH=$HOME/github/alias_lynx;
+
+alias clynx='lynx -cfg=$ALIAS_LYNX_PATH/my_lynx.cfg';
 WWW_HOME='http://lynx.invisible-island.net'
 export WWW_HOME;
 
