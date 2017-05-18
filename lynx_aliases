@@ -26,5 +26,28 @@ function yn() {
 	clynx "$URL" ;
 }
 
+#These should also all be implemented in a jumpfile, but there are complications.
+# - The JUMPFILE command requires an absolute path (no ~)
+# - We don't want to overwrite any existing jumpfiles.
+# - Support for searching from a jumpfile is a fairly new feature - only supported from 2.8.8dev.10
 
+# Check for an existing jumpfile
+grep -i jumpfile $ALIAS_LYNX_PATH/my_lynx.cfg >> $ALIAS_LYNX_PATH/testfile;
+if [ ! -s $ALIAS_LYNX_PATH/testfile ]; then
+	# Check the lynx version
+	# We need a version newer than 2011, and sort -V only dates back to 2008
+	# ...but lynx is much older than that, and I want universal compatibility, so this is a bug come FIXME
+	LYNX_VERSION="$(lynx -version | awk 'NR==1{print $3}')";
+	MIN_SEARCH_LYNX_VERSION='2.8.8dev.10';
+	function version_gt() { test "$(printf '%s\n' "$@" | sort -V | head -n 1)" != "$1"; }
+
+	if version_gt $MIN_SEARCH_LYNX_VERSION $LYNX_VERSION; then
+		# Add a generic jumpfile without the ability to search :-(
+		echo "JUMPFILE:$ALIAS_LYNX_PATH/jumps-generic.html" >> $ALIAS_LYNX_PATH/my_lynx.cfg;
+	else
+		# Add a jumpfile that includes search options
+		echo "JUMPFILE:$ALIAS_LYNX_PATH/jumps-search.html" >> $ALIAS_LYNX_PATH/my_lynx.cfg;
+	fi
+fi
+rm $ALIAS_LYNX_PATH/testfile
 
