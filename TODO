@@ -1,0 +1,13 @@
+These should probably use the issue tracker on GitHub, but this will do for now...
+
+Known issues/areas for improvement:
+
+- the test for what version of lynx is in use won't work on most older platforms, making it of limited use.
+ - Also, the "close enough" copy/paste hack of code off Stack Overflow is inappropriate. It should be code
+  that this project has a license to use, AND it should actually solve the problem.
+- JUMPFILE won't add the new features if a jumpfile already exists.
+- jumpfiles and functions should be automatically generated from one set of source material so the same thing doesn't need to be added/changed in three places.
+ - Also, the ? shortcut should work for any $ALIAS_LYNX_PATH
+ - Ideally, we'd detect the existing jumpfile, add appropriate new links to it, and then sort them correctly.
+  - Oooh, if they upgrade lynx, we ought to replace static jumpfile links with searchable ones automatically.
+
