@@ -10,4 +10,5 @@ Known issues/areas for improvement:
  - Also, the ? shortcut should work for any $ALIAS_LYNX_PATH
  - Ideally, we'd detect the existing jumpfile, add appropriate new links to it, and then sort them correctly.
   - Oooh, if they upgrade lynx, we ought to replace static jumpfile links with searchable ones automatically.
+- A recent Cygwin update removes the default SSL certificates file. A fix for making that work out of the box would be handy. Or not, if it means having to handle certs and revocations...
 
