@@ -49,5 +49,5 @@ if [ ! -s $ALIAS_LYNX_PATH/testfile ]; then
 		echo "JUMPFILE:$ALIAS_LYNX_PATH/jumps-search.html" >> $ALIAS_LYNX_PATH/my_lynx.cfg;
 	fi
 fi
-rm $ALIAS_LYNX_PATH/testfile
+rm -f $ALIAS_LYNX_PATH/testfile
 
