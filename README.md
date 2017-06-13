@@ -5,7 +5,7 @@ All of these are shell scripts or configuration options that work with a standar
 
 Ironically, only one line of this repository is actually an alias, since that turned out to not be particularly useful for wrapping and configuring lynx for regular use. I've decided to keep the name anyway, since this is already used in enough places that moving/renaming the repository would create extra work.
 
-These were originally developed for my .bashrc file, but got their own repository for the sake of convenience and portability. To use, clone the repo and add the following lines to your .bashrc:
+These were originally developed for my .bashrc file, but got their own repository for the sake of convenience and portability. To use, clone the repo and add the following lines to wherever your aliases are stored (most likely .bash_aliases, .bashrc, or .zshrc):
 
 ```
 if [ -f ~/github/alias_lynx/lynx_aliases ]; then
