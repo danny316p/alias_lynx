@@ -10,5 +10,8 @@ Known issues/areas for improvement:
  - Also, the ? shortcut should work for any $ALIAS_LYNX_PATH
  - Ideally, we'd detect the existing jumpfile, add appropriate new links to it, and then sort them correctly.
   - Oooh, if they upgrade lynx, we ought to replace static jumpfile links with searchable ones automatically.
+ - searchable jumpfiles could have full DDG bang integration - just parse https://duckduckgo.com/bang.v236.js
 - A recent Cygwin update removes the default SSL certificates file. A fix for making that work out of the box would be handy. Or not, if it means having to handle certs and revocations...
 
+- redirect "automatically refresh" pages are too slow - can they be configured to be automatic (or at least faster?)
+- need to find a smoother way to handle cookie preferences...maybe a "deny unless I say otherwise" instead of a "prompt every time".
