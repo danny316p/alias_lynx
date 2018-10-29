@@ -8,8 +8,10 @@ Ironically, only one line of this repository is actually an alias, since that tu
 These were originally developed for my .bashrc file, but got their own repository for the sake of convenience and portability. To use, clone the repo and add the following lines to wherever your aliases are stored (most likely .bash_aliases, .bashrc, or .zshrc):
 
 ```
-if [ -f ~/github/alias_lynx/lynx_aliases ]; then
-    . ~/github/alias_lynx/lynx_aliases
+# This first line may need to be configured as needed
+ALIAS_LYNX_PATH=$HOME/github/alias_lynx;
+if [ -f $ALIAS_LYNX_PATH/lynx_aliases ]; then
+    . $ALIAS_LYNX_PATH/lynx_aliases
 fi
 ```
 
